@@ -36,6 +36,8 @@ do
     else
         echo "$line,${a2[$(echo $line | cut -d "," -f 3)]},${a3[$(echo $line | cut -d "," -f 3)]}"
     fi
-done  < tmp.txt | column -t -s"," > final.txt
+done  < tmp.txt >fileforreplace.txt 
+
+column -t -s"," fileforreplace.txt > final.txt
 
 rm tmp.txt file.txt
