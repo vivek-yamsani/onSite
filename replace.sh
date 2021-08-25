@@ -15,4 +15,6 @@ do
     ((x++))
 done
 
-awk -F"[,]" -v f="$find" -v r="$replace" -v c="$x" '{if($c == f){ $c=r;for(i=1;i<=NF;i++){printf "%s%s",(NR>1?",":""),$i} printf "\n"}else{print $0;}}'  fileforreplace.txt | column -t -s"," > final.txt
+awk -F"[,]" -v f="$find" -v r="$replace" -v c="$x" '{if($c == f){ $c=r;for(i=1;i<=NF;i++){printf "%s%s",(NR>1?",":""),$i} printf "\n"}else{print $0;}}'  fileforreplace.txt > final.txt
+cp final.txt fileforreplace.txt
+column -t -s"," fileforreplace.txt > final.txt
