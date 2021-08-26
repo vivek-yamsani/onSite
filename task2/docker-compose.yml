@@ -1,0 +1,30 @@
+version: '3.1'
+services:
+    desktopserver1:
+        image: php:7.1-apache
+        restart: always
+        ports: 
+            - "9999:80"
+        volumes: 
+            - ./desktopapp1/:/var/www/html/
+    desktopserver2:
+        image: php:7.1-apache
+        restart: always
+        ports: 
+            - "8888:80"
+        volumes: 
+            - ./desktopapp2/:/var/www/html/
+    mobileserver1:
+        image: php:7.1-apache
+        restart: always
+        ports: 
+            - "9998:80"
+        volumes: 
+            - ./mobileapp1/:/var/www/html/
+    mobileserver2:
+        image: php:7.1-apache
+        restart: always
+        ports: 
+            - "8887:80"
+        volumes: 
+            - ./mobileapp2/:/var/www/html/
