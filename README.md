@@ -9,3 +9,15 @@ for merging files
 ```bash 
 ./merge.sh
 ```  
+
+# TASK-2
+### LOAD BALANCER
+#### Normal Mode
+Creating servers
+```bash
+sudo docker-compose up
+```
+To make apache server on as load-balancer run
+```bash
+./hostConf.sh
+```
