@@ -4,8 +4,10 @@ function isMobile() {
 }
 
 if(isMobile()){
-    header("Location: http://www.mobile.loadbalancer.local")
+    header("Location: http://www.mobile.loadbalancer.local");
 }
 else {
-    header("Location: http://www.desktop.loadbalancer.local")
+    header("Location: http://www.desktop.loadbalancer.local");
 }
+
+?>
